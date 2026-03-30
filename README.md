@@ -70,8 +70,6 @@ Once both the Frontend and Backend are running, perform the following steps:
 ---
 ### 5. Troubleshooting
 
-## ⚠️ Troubleshooting Common Errors
-
 | Error | Cause | Solution |
 | :--- | :--- | :--- |
 | `EADDRINUSE: :::3000` | A previous instance of the API is still running. | Run `lsof -ti:3000 | xargs kill -9` then restart. |
