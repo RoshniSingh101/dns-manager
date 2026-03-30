@@ -27,6 +27,8 @@ You can set your computer's DNS settings to `127.0.0.1`.
 - Browsing to `dev.local` will hit your private IP.
 - Browsing to `google.com` will still work perfectly via the forwarder.
 
+---
+
 ## Getting Started (Docker)
 
 1. **Clean up local environment**:
