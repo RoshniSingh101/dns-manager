@@ -1,0 +1,23 @@
+services:
+  # --- BACKEND (API + DNS ENGINE) ---
+  dns-backend:
+    build: ./server
+    container_name: dns-core-backend
+    ports:
+      - "3000:3000"       # API Port
+      - "1053:1053/udp"   # DNS Port (UDP)
+    volumes:
+      - ./server/records.db:/app/records.db # Persists data on host machine
+    restart: always
+
+  # --- FRONTEND (REACT/NEXT.JS) ---
+  dns-frontend:
+    build: ./client
+    container_name: dns-core-dashboard
+    ports:
+      - "3001:3000"       # Map internal Next.js port to 3001 on local machine
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
+    depends_on:
+      - dns-backend
+    restart: always
