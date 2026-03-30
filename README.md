@@ -44,7 +44,7 @@ Open http://localhost:3001 in your browser.
 
 ---
 
-### 4. How to Test Your Server
+### How to Test Your Server
 
 Once both the Frontend and Backend are running, perform the following steps:
 
@@ -68,7 +68,7 @@ Once both the Frontend and Backend are running, perform the following steps:
    - The "Live Traffic" section of your UI should show a new log entry for `dev.local` (LOCAL query) and `google.com` (PROXY query).
 
 ---
-### 5. Troubleshooting
+### Troubleshooting
 
 | Error | Cause | Solution |
 | :--- | :--- | :--- |
@@ -79,7 +79,7 @@ Once both the Frontend and Backend are running, perform the following steps:
 
 ---
 
-### 6. Directory Structure
+### Directory Structure
 
 ```text
 .
@@ -98,7 +98,7 @@ Once both the Frontend and Backend are running, perform the following steps:
 
 ---
 
-### 7. Security and Best Practices
+### Security and Best Practices
 
 - **Caching:** Currently, recursive responses are not cached. Every request to a public site hits the upstream provider. For production, consider adding a `cache` table to improve speed.
 - **UDP Flood Prevention:** Recursive servers can be used in "DNS Amplification" attacks. Ensure the server is only reachable from your local network (`127.0.0.1` or your LAN IP).
